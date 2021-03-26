@@ -19,15 +19,8 @@ function createHeaderElements(id, text) {
   return div;
 }
 
-function sideBar(id) {
+function section(id) {
   const section = document.createElement("section");
-  section.setAttribute("id", id);
-
-  return section;
-}
-
-function taskArea(id){
-    const section = document.createElement("section");
   section.setAttribute("id", id);
 
   return section;
@@ -42,11 +35,14 @@ function loadPage() {
   const headerElements = createHeaderElements("headerElement", "ToDo List");
   header.appendChild(headerElements);
 
-  const side = sideBar("sideBar");
-  content.appendChild(side);
+  const contentArea = section('contentArea')
+  content.appendChild(contentArea)
 
-  const tasks = taskArea('tasks')
-  content.appendChild(tasks)
+  const side = section("sideBar");
+  contentArea.appendChild(side);
+
+  const tasks = section('tasks')
+  contentArea.appendChild(tasks)
 }
 
 export default loadPage();
