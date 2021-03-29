@@ -14,3 +14,5 @@ function createToDo(name, details, dueDate, priority){
         priority
     }
 }
+
+export default createToDo

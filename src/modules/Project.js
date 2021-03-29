@@ -6,3 +6,4 @@ class Project {
     this.tasks = []
   }
 }
+

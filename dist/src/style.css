@@ -56,18 +56,24 @@ body {
   background: rgb(201, 201, 201);
   height: 1100px;
   width: 30%;
-  min-width: 300px;
+  min-width: 250px;
   border-top-left-radius: 2rem;
   border: 1px solid rgb(117, 117, 117);
   box-shadow: 0 0 10px 1px rgb(121, 121, 121);
+}
 
+@media screen and (max-width: 500px){
+  #sideBar{
+    width: 0%;
+    min-width: 0px;
+    visibility: hidden;
+  }
 }
 
 #tasks{
   background: white;
   height: 1100px;
   width: 100%;
-  min-width: 600px;
   border-top: 1px solid rgb(117, 117, 117);
   box-shadow: 0 0 10px 1px rgb(121, 121, 121);
 }
