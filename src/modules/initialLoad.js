@@ -45,4 +45,4 @@ function loadPage() {
   contentArea.appendChild(tasks)
 }
 
-export default loadPage()
+export default loadPage

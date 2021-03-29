@@ -6,13 +6,14 @@
 //Allow for edits on task through event listeners
 
 //Creates each ToDo Item in list
-function createToDo(name, details, dueDate, priority){
-    return {
-        name,
-        details,
-        dueDate,
-        priority
+class ToDo{
+    constructor(name, details, date, priority){
+        this.name = name
+        this.details = details
+        this.date = date
+        this.priority = priority
+        this.id = setID()
     }
 }
 
-export default createToDo
+export default ToDo
