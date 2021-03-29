@@ -26,6 +26,23 @@ function section(id) {
   return section;
 }
 
+function inputForm(id){
+  const section = document.createElement('section')
+  section.setAttribute('id', 'submitForm')
+
+  const input = document.createElement('input')
+  input.setAttribute('id', id)
+
+  const btn = document.createElement('button')
+  btn.setAttribute('id', 'submit')
+  btn.textContent = '>'
+
+  section.appendChild(input)
+  section.appendChild(btn)
+
+  return section
+}
+
 function loadPage() {
   const content = document.querySelector("#content");
 
@@ -40,6 +57,9 @@ function loadPage() {
 
   const side = section("sideBar");
   contentArea.appendChild(side);
+
+  const input = inputForm('inputProject')
+  side.appendChild(input)
 
   const tasks = section('tasks')
   contentArea.appendChild(tasks)

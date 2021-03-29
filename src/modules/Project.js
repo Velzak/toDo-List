@@ -16,7 +16,7 @@ class Project {
   render() {
     //create each individual project
     const div = document.createElement('div')
-    div.setAttribute('id', 'projects')
+    div.setAttribute('class', 'projects')
 
     const p = document.createElement('p')
     p.textContent = this.name
@@ -31,7 +31,13 @@ class Project {
     div.appendChild(del)
 
     sideBar.appendChild(div)
-
+    div.addEventListener('click', () => {
+      currentProject = this
+      currentProject.active = false
+      
+      let projectClass = document.querySelectorAll('.projects')
+      projectClass.forEach((f) => f.classList.value = 'project')
+    })
   }
 
   delete(){

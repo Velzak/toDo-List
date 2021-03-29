@@ -52,6 +52,11 @@ body {
   height: 100%;
 }
 
+/******************************************
+  /* SIDE BAR AREA
+/*******************************************/
+
+
 #sideBar{
   background: rgb(201, 201, 201);
   height: 1100px;
@@ -62,6 +67,36 @@ body {
   box-shadow: 0 0 10px 1px rgb(121, 121, 121);
 }
 
+#submitForm{
+  margin: 1.5rem .75rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#inputProject{
+  padding: 1rem;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  border: 1px solid gray;
+  outline: none;
+  font-size: 1rem;
+  max-width: 300px;
+  height: 3rem;
+  width: 100%;
+}
+
+#submit{
+  height: 3rem;
+  width: 3rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  border: 1px solid gray;
+  border-left: none;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
 @media screen and (max-width: 500px){
   #sideBar{
     width: 0%;
@@ -69,6 +104,12 @@ body {
     visibility: hidden;
   }
 }
+
+
+/******************************************
+  /* TASK AREA
+/*******************************************/
+
 
 #tasks{
   background: white;
@@ -80,4 +121,4 @@ body {
 
 /******************************************
   /* ADDITIONAL STYLES
-  /*******************************************/
+/*******************************************/
