@@ -1,6 +1,6 @@
 //Create a project object to store each task in, allow for creation of more projects
 
-const sideBar = document.querySelector('#sideBar')
+const sidebar = document.querySelector('#projectArea #sideBar')
 
 function setId(){
   return Math.random().toString().split('.').join('')
@@ -29,14 +29,14 @@ class Project {
 
     div.appendChild(p)
     div.appendChild(del)
+    sidebar.appendChild(div)
 
-    sideBar.appendChild(div)
+   //Clicking on each project will make the project active
     div.addEventListener('click', () => {
       currentProject = this
       currentProject.active = false
-      
       let projectClass = document.querySelectorAll('.projects')
-      projectClass.forEach((f) => f.classList.value = 'project')
+      projectClass.forEach((f) => f.classList.value = 'projects')
     })
   }
 
@@ -46,13 +46,12 @@ class Project {
     Project.renderProject()
   }
 
-  renderProject(){
+  static renderProject(){
     //renders the projects array
-    sideBar.innerHTML = ""
     projectArray.forEach((project) => project.render())
   }
 
-  setCurrentFolder(project){
+  static setCurrentFolder(project){
     currentProject = project
   }
   
@@ -61,4 +60,4 @@ class Project {
 let projectArray = [new Project('Test')]
 let currentProject = projectArray[0]
 
-export default { Project, projectArray, currentProject }
+export { Project, projectArray, currentProject }

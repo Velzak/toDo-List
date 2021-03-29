@@ -61,6 +61,11 @@ function loadPage() {
   const input = inputForm('inputProject')
   side.appendChild(input)
 
+  const projects = section('projectArea')
+  projects.setAttribute('class', 'card')
+
+  side.appendChild(projects)
+
   const tasks = section('tasks')
   contentArea.appendChild(tasks)
 }
