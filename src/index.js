@@ -3,6 +3,7 @@ import loadPage from "./modules/initialLoad"
 
 loadPage();
 
+
 const projectForm = document.querySelector('#submit')
 
 projectForm.addEventListener('click', (e) => {
@@ -12,8 +13,10 @@ projectForm.addEventListener('click', (e) => {
         alert('The Project must have a name')
         return
     }
+    
     const project = new Project(input.value)
     projectArray.push(project)
     input.value = ''
+
     Project.renderProject()
 })
