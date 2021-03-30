@@ -122,3 +122,19 @@ body {
 /******************************************
   /* ADDITIONAL STYLES
 /*******************************************/
+
+.card{
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+.projects{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  font-size: 2rem;
+  background: rgb(223, 180, 165);
+  border-radius: 1rem;
+  margin: .5rem;
+}
