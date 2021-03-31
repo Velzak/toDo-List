@@ -16,6 +16,7 @@ class Project {
     //create each individual project
     const div = document.createElement('div')
     div.setAttribute('class', 'projects')
+    div.setAttribute('id', this.id)
 
     const p = document.createElement('p')
     p.textContent = this.name
@@ -46,6 +47,13 @@ class Project {
     //Deletes the clicked project based on the ID
     projectArray = projectArray.filter((project) => project.id !== this.id)
     Project.renderProject()
+  }
+
+  renderTasks(){
+    const tasks = document.querySelector('#taskArea')
+    tasks.innerHTML = ''
+    this.tasks.forEach((task) => task.render())
+
   }
 
   static renderProject(){

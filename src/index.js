@@ -20,3 +20,4 @@ projectForm.addEventListener('click', (e) => {
 
     Project.renderProject()
 })
+

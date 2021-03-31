@@ -105,6 +105,20 @@ body {
   }
 }
 
+.projects{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  font-size: 2rem;
+  background: rgb(223, 180, 165);
+  border-radius: 1rem;
+  margin: .5rem;
+}
+
+.active{
+  background: rgb(204, 131, 104);
+}
+
 
 /******************************************
   /* TASK AREA
@@ -119,6 +133,60 @@ body {
   box-shadow: 0 0 10px 1px rgb(121, 121, 121);
 }
 
+#task-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#task-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem;
+}
+
+#task-container > input {
+  height: 3rem;
+  width: 100%;
+  border-radius: 2rem;
+  border: 1px solid gray;
+  padding: 1rem;
+  outline: none;
+  margin: 0 .25rem;
+  font-size: 1.25rem;
+}
+
+#task-container > #dateTask{
+  width: 100%;
+}
+
+#priorityTask{
+  width: 90%;
+  max-width: 100px;
+  height: 3rem;
+  border-radius: 1rem;
+  margin: 0 .25rem;
+  font-size: 1.25rem;
+
+}
+
+#submitTasks{
+  width: 40%;
+  height: 3rem;
+  border-radius: 1rem;
+  border: 1px solid gray;
+  margin: 0 .25rem;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.25rem;
+}
+
+
+
+
+
 /******************************************
   /* ADDITIONAL STYLES
 /*******************************************/
@@ -129,12 +197,3 @@ body {
   margin: 1rem;
 }
 
-.projects{
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
-  font-size: 2rem;
-  background: rgb(223, 180, 165);
-  border-radius: 1rem;
-  margin: .5rem;
-}
