@@ -1,10 +1,10 @@
 //Creates each ToDo Item in list
-import currentProject from "./Project";
+import { currentProject } from "./Project";
 
 function setId() {
   return Math.random().toString().split(".").join("");
 }
-export default class ToDo {
+export class ToDo {
   constructor(name, date, priority) {
     this.name = name;
     this.date = date;
