@@ -35,6 +35,7 @@ class Project {
     div.addEventListener('click', () => {
       currentProject = this
       currentProject.active = false
+      this.renderTasks()
       let projectClass = document.querySelectorAll('.projects')
       projectClass.forEach((f) => f.classList.value = 'projects')
       if (!div.classList.value.includes('active')) {
@@ -62,13 +63,13 @@ class Project {
     projectArray.forEach((project) => project.render())
   }
 
-  static setCurrentFolder(project){
+  static setCurrentProject(project){
     currentProject = project
   }
   
 }
 
-let projectArray = [new Project('Test')]
+let projectArray = [new Project('Test Project')]
 let currentProject = projectArray[0]
 
 

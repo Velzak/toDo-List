@@ -49,7 +49,8 @@ body {
   display: flex;
   flex-wrap: nowrap;
   width: 100%;
-  height: calc(100vh - 40px);
+  min-height: 95vh;
+  justify-content: center;
 }
 
 /******************************************
@@ -59,13 +60,17 @@ body {
 
 #sideBar{
   background: rgb(201, 201, 201);
-  height: 1100px;
+  height: 100%;
   width: 30%;
   min-width: 250px;
-  border-top-left-radius: 2rem;
+  border-radius: 2rem;
   border: 1px solid rgb(117, 117, 117);
   box-shadow: 0 0 10px 1px rgb(121, 121, 121);
+  min-height: 50vh;
+  margin: 0 0 0 2rem;
 }
+
+
 
 #submitForm{
   margin: 1.5rem .75rem;
@@ -97,19 +102,11 @@ body {
   font-weight: 300;
 }
 
-@media screen and (max-width: 500px){
-  #sideBar{
-    width: 0%;
-    min-width: 0px;
-    visibility: hidden;
-  }
-}
-
 .projects{
   display: flex;
   justify-content: space-between;
   padding: 1rem;
-  font-size: 2rem;
+  font-size: 1.75rem;
   background: rgb(223, 180, 165);
   border-radius: 1rem;
   margin: .5rem;
@@ -127,10 +124,13 @@ body {
 
 #tasks{
   background: white;
-  height: 1100px;
+  height: 100%;
   width: 100%;
+  min-height: 50vh;
   border-top: 1px solid rgb(117, 117, 117);
   box-shadow: 0 0 10px 1px rgb(121, 121, 121);
+  border-radius: 2rem;
+  margin: 0 2rem;
 }
 
 #task-section{
@@ -183,9 +183,95 @@ body {
   font-size: 1.25rem;
 }
 
+#taskArea{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 3rem;
+}
 
+.taskToDo{
+  margin: 1rem 0;
+  background: rgb(219, 219, 219);
+  padding: 1.5rem;
+  border-radius: .5rem;
+}
 
+.taskToDo, .taskName, .taskDetails{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.5rem;
+  align-items: center;
 
+}
+
+.taskName{
+  text-align: left;
+}
+
+.taskDetails{
+  justify-content: space-between;
+  width: 60%;
+}
+
+.taskDetails h4{
+  margin: 0 3rem;
+}
+
+/******************************************
+  /* Media Query
+/*******************************************/
+
+@media screen and (max-width: 500px){
+  #content{
+    width: 100%;
+  }
+
+  #contentArea{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  #sideBar{
+    width: 100%;
+    margin: 1rem 0;
+    min-height: 10vh;
+  }
+
+  #contentArea #tasks{
+    width: 100%;
+    margin: 0;
+  }
+
+  #header{
+    width: 100%;
+  }
+
+  #taskArea{
+    margin: .5rem;
+  }
+
+  .taskToDo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .5rem;
+    padding: .5rem;
+    font-size: 1rem;
+  }
+
+  .taskName{
+    width: 30%;
+  }
+
+  .taskDetails h4{
+    visibility: hidden;
+  }
+  
+}
 
 /******************************************
   /* ADDITIONAL STYLES

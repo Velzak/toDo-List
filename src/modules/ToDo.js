@@ -4,7 +4,7 @@ import { currentProject } from "./Project";
 function setId() {
   return Math.random().toString().split(".").join("");
 }
-export class ToDo {
+export default class ToDo {
   constructor(name, date, priority) {
     this.name = name;
     this.date = date;

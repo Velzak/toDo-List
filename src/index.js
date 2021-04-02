@@ -19,8 +19,10 @@ projectForm.addEventListener('click', (e) => {
     const project = new Project(input.value)
     projectArray.push(project)
     input.value = ''
-
     Project.renderProject()
+    Project.setCurrentProject(project)
+    let projects = document.querySelectorAll('.projects')
+    projects[projects.length - 1].classList.add('active')
 })
 
 
@@ -43,15 +45,12 @@ taskForm.addEventListener('click', (e) => {
     }
 
     const priority = document.querySelector('#priorityTask')
-    if (priority.value === ''){
-        alert('The Project must have a name')
-        return
-    }
-
     const task = new ToDo(title.value, date.value, priority.value)
-
+    title.value = ''
+    date.value = ''
     currentProject.tasks.push(task)
     task.render()
 
-
 })
+
+Project.renderProject()
