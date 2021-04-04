@@ -34,18 +34,22 @@ taskForm.addEventListener('click', (e) => {
 
     const title = document.querySelector('#nameTask')
     if (title.value === ''){
-        alert('The Project must have a name')
+        alert('The To Do must have a name')
         return
     }
 
     const date = document.querySelector('#dateTask')
     if (date.value === ''){
-        alert('The Project must have a name')
+        alert('The date must be filled')
         return
     }
 
     const priority = document.querySelector('#priorityTask')
     const task = new ToDo(title.value, date.value, priority.value)
+    // localStorage.setItem(title.value, title.value)
+    // localStorage.setItem(date.value, date.value)
+    // localStorage.setItem(priority.value, priority.value)
+
     title.value = ''
     date.value = ''
     currentProject.tasks.push(task)
